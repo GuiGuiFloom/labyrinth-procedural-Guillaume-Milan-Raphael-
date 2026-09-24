@@ -8,7 +8,7 @@ public class flashlight : MonoBehaviour
     [SerializeField] private GameObject torch;
     [SerializeField] private float battery = 100f;
     [SerializeField] private float batteryDepletionSpeed = 0.7f;
-    [SerializeField] private KeyCode SwtichKey = KeyCode.Q;
+    [SerializeField] private KeyCode SwtichKey = KeyCode.F;
     public GameObject player;
     private bool on;
 
@@ -18,7 +18,9 @@ public class flashlight : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(SwtichKey))
-            on = !on;
+        { on = !on;
+            
+        }
 
         if (on && battery > 0)
             battery -= batteryDepletionSpeed * Time.deltaTime;
