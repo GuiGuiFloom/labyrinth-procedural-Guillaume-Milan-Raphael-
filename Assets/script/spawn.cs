@@ -9,6 +9,7 @@ public class spawn : MonoBehaviour
     IEnumerator compteur()
     {
         yield return new WaitForSeconds(5);
+
         GameObject.Find("Maze Generator").GetComponent<MazeGenerator>().build();
         StartCoroutine(compteur());
     }
@@ -23,6 +24,6 @@ public class spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(compteur());
     }
 }
