@@ -68,17 +68,18 @@ public class MazeGenerator : MonoBehaviour
     //. Couroutine permettant de clear les walls en asynchrone
     public void GenerateMaze(MazeCells previousCell, MazeCells currentCell)
     {
+        //. appelle la methode Visit qui dit que la cellule actuelle est deja vistée
         currentCell.Visit();
+
+        //. appelle la methode ClearWalls
         ClearWalls(previousCell, currentCell);
 
-
+        //. creer une variable nextCell
         MazeCells nextCell;
 
 
         //. verifier les autres cellules si celle d'a cote sont visitées ou non et appelle la methode
-        //.GetUnvisitedCell si vrai, si faux appeller GenerateMaze
-
-
+        //.GetUnvisitedCell si vrai, si faux appelle GenerateMaze tant que la cellule precedente n'est pas nulle
         do
         {
             nextCell = GetNextUnvisitedCell(currentCell);
@@ -91,17 +92,18 @@ public class MazeGenerator : MonoBehaviour
         
     }
 
-    //. Verifier les cellules nnon visitées
+    //. methode qui verifie les cellules non visitées
     private MazeCells GetNextUnvisitedCell(MazeCells currentCell)
     {
-
+        //. creer une variable pour les cellules non visitées
         var unvisitedCells = GetUnvisitedCell(currentCell);
         return unvisitedCells.OrderBy(_ => Random.Range(1, 10)).FirstOrDefault();
     }
 
-    //. permet de verifier si les cellules autor sont Unvisited ou non
+    //. permet de verifier si les cellules autor sont Unvisited ou non a chaque fois qu'on se trouve sur une cellule dite actuelle
     private IEnumerable<MazeCells> GetUnvisitedCell(MazeCells currentCell)
     {
+        //. creer des variables qui donnent la position x et z de la cellule actuelle
         int x = (int)currentCell.transform.position.x;
         int z = (int)currentCell.transform.position.z;
 
@@ -112,7 +114,7 @@ public class MazeGenerator : MonoBehaviour
             var cellToRight = mazeGrid [x + 1, z];
 
 
-            //. permettre de continuer dans les cellules des autres direction si elle est verifier
+            //. permettre de continuer a droite si elle est verifier
             if (cellToRight.IsVisited == false)
             {
                 yield return cellToRight;
@@ -121,13 +123,13 @@ public class MazeGenerator : MonoBehaviour
 
         }
 
-        //. verifie la meme chose mais a gauche
+        //. verifie la cellule de gauche
         if (x -1 >= 0)
         {
             var cellToLeft = mazeGrid [x - 1, z];
 
 
-            //. permettre de continuer dans les cellules des autres direction si elle est verifier
+            //. permettre de continuer a gauche si elle est verifier
             if (cellToLeft.IsVisited == false)
             {
                 yield return cellToLeft;
@@ -135,13 +137,13 @@ public class MazeGenerator : MonoBehaviour
             }
 
         }
-        //. verifie la meme chose mais devant lui
+        //. verifie la cellule d'en face
         if (z +1 < mazeDepth)
         {
             var cellToFront= mazeGrid [x, z + 1];
 
 
-            //. permettre de continuer dans les cellules des autres direction si elle est verifier
+            //. permettre de continuer en face si elle est verifier
             if (cellToFront.IsVisited == false)
             {
                 yield return cellToFront;
@@ -149,13 +151,13 @@ public class MazeGenerator : MonoBehaviour
             }
 
         }
-        //. verifie la meme chose mais derriere lui
+        //. verifie la meme chose mais derriere 
         if (z - 1 >= 0)
         {
             var cellToback = mazeGrid [x, z - 1];
 
             
-            //. permettre de continuer dans les cellules des autres direction si elle est verifier
+            //. permettre de continuer derriere si elle est verifier
             if (cellToback.IsVisited == false)
             {
                 yield return cellToback;
@@ -171,6 +173,7 @@ public class MazeGenerator : MonoBehaviour
 
     private void ClearWalls(MazeCells previousCell, MazeCells currentCell)
     {
+        //. si la cellule d'avant est null  = recommencer
         if (previousCell == null)
         {
             return;
@@ -178,7 +181,7 @@ public class MazeGenerator : MonoBehaviour
 
 
         //. si la posi.x de la cellule precedente est < a celle de l'actuelle cellule
-        //. desactiver le mur de droite de la prochaine cellule et le gauche de l'actuelle cellule
+        //. desactive le mur de droite de la prochaine cellule et le gauche de l'actuelle cellule
         if (previousCell.transform.position.x <currentCell.transform.position.x)
         {
 
@@ -199,7 +202,7 @@ public class MazeGenerator : MonoBehaviour
 
 
 
-        //. les deuc If suivants font la memme choses pour laxe Z
+        //. les deux If suivants font la memme choses pour l'axe Z et -Z
         if (previousCell.transform.position.z < currentCell.transform.position.z)
             {
 

@@ -23,8 +23,10 @@ public class MazeCells : MonoBehaviour
     public bool IsVisited;
 
 
+    //. bunch of methode qui sont appellée durant Maze Generator script
 
 
+    //. si cette fontion est appellée son etat devient true (visité)
     public void Visit()
     {
         IsVisited = true;
@@ -32,6 +34,7 @@ public class MazeCells : MonoBehaviour
 
     }
 
+    //. methodes appellées durant le Maze Generator script qui desactive les murs
     public void ClearLeftWall()
     {
         leftWall.SetActive(false);
