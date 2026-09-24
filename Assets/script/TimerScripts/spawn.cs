@@ -8,7 +8,7 @@ public class spawn : MonoBehaviour
     //. Couroutine permettant d'appeller la fonction build apres un timer ert qui relance la coroutine a chaque fois que celle ci se termine 
     IEnumerator compteur()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(30);
 
         GameObject.Find("Maze Generator").GetComponent<MazeGenerator>().build();
         StartCoroutine(compteur());

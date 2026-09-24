@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 2091119534783582687}
   - component: {fileID: 8013451413971579782}
   - component: {fileID: 3323844331790053373}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wallGraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 411234394506147319}
   - component: {fileID: 5549009519825648239}
   - component: {fileID: 440589283455573287}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wallGraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 6670012876614304883}
   - component: {fileID: 1411719340729547114}
   - component: {fileID: 2006430870963132971}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wallGraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,6 +432,7 @@ MonoBehaviour:
   frontWall: {fileID: 7604271251311591004}
   backWall: {fileID: 5826409668208046773}
   unvisitedBlock: {fileID: 2972337793835007667}
+  MazePrefab: {fileID: 0}
   IsVisited: 0
 --- !u!1 &3785973505805257140
 GameObject:
@@ -444,7 +445,7 @@ GameObject:
   - component: {fileID: 8671408081393426800}
   - component: {fileID: 2221356738282045416}
   - component: {fileID: 7535216985543096367}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wallGraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +589,7 @@ GameObject:
   - component: {fileID: 266741720453574265}
   - component: {fileID: 6721578711984393167}
   - component: {fileID: 9170592234987576891}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wallGraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
