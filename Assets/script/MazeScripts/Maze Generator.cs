@@ -31,6 +31,13 @@ public class MazeGenerator : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        //.mettre le curseur invisible
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        //.Afficher un message au debut du jeu
+
         //. la methode build est appellée au start
         build();
     }
