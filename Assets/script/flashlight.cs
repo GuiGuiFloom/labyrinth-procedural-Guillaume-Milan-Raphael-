@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,11 @@ public class flashlight : MonoBehaviour
     [SerializeField] private KeyCode SwtichKey = KeyCode.F;
     public GameObject player;
     private bool on;
+
+    private float noBattery;
+
+    /*public GameOverScript GameOverScript;*/ // UI Game Over
+
 
     //UI betterie
 
@@ -37,12 +43,23 @@ public class flashlight : MonoBehaviour
         torch.SetActive(on);
 
         //player death
+
+
         if (on && battery > 0)
             battery -= batteryDepletionSpeed * Time.deltaTime;
-        else if (battery < 0.01f)
+        else if (battery < 0.01f) 
 
             // to modify  for full game (disable les controles du joueur
-            Destroy(player.gameObject);              
+            player.SetActive(false);
+            GameObject.Find("GameOverManager").GetComponent<GameOverScript>().GameOver();
+
+
+
 
     }
+
+/*    public void GameOver()
+    {
+        GameOverScript.Setup();
+    }*/
 }
