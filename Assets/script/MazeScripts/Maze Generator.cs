@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+
+
+
+//. Globalement ce code permet de creer une grosse case de block, l'algo va detecter les blocks autour de lui et va decider de le desaciver ou non en fontion de si ils ont deja ete visité, il explore chaque possibilité dont ils disposent (dans ce cas un labyrinthe)
+// ce code est insipiré de l'algorithme recursive backtracker 
+
 public class MazeGenerator : MonoBehaviour
 {
 

@@ -276,7 +276,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1284831241}
+    m_TransformParent: {fileID: 485489585}
     m_Modifications:
     - target: {fileID: 1002705123656268, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_Name
@@ -284,31 +284,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 63.9721
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3750334
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.03963
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710677
+      value: 0.06162845
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.70710677
+      value: -0.06162845
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.70441604
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.70441604
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -316,11 +316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -384,12 +384,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4278c01431cfa4f871c58d74ac59b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::flashlight
-  torch: {fileID: 0}
+  torch: {fileID: 371428576}
   battery: 100
   batteryDepletionSpeed: 0.7
-  SwtichKey: 113
-  player: {fileID: 1265222324}
-  batterytext: {fileID: 0}
+  SwtichKey: 102
+  player: {fileID: 1263804255}
+  batterytext: {fileID: 1617676345}
 --- !u!4 &371428580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
@@ -597,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3104480721489619846, guid: 3f771bb7d1eea1341adcc167bf9918e6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -108.4
+      value: -286.5
       objectReference: {fileID: 0}
     - target: {fileID: 3104480721489619846, guid: 3f771bb7d1eea1341adcc167bf9918e6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -683,7 +683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 123}
+  m_AnchoredPosition: {x: -25, y: 244}
   m_SizeDelta: {x: 177.1334, y: 52.449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574953123
@@ -1360,7 +1360,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2038066423}
+      addedObject: {fileID: 371428580}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
 --- !u!114 &1617676345 stripped
