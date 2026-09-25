@@ -9,14 +9,14 @@ public class TextOnStart : MonoBehaviour
 
 
 
-    //; coroutine qui lance un timer pour que le text u debut ne saffiche que pendant un moment
+    //; coroutine qui lance un timer pour que le text u debut ne saffiche que pendant un moment(2 secondes ici)
     IEnumerator TextOStart()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(2f);
 
-        /*GameObject.Find("TextDebut").SetActive(false);*/
-        GameObject.Find("TextDebut").transform.position = new Vector3(-1000, 0, 0);
-
+        GameObject.Find("Text du debut").SetActive(false);
+        
+        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
