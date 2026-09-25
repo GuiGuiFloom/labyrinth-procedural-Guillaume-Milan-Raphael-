@@ -1,16 +1,18 @@
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class Exit : MonoBehaviour
+
+public class winscreen : MonoBehaviour
 {
- public void RestartButton()
+    public winscreen Winscreen;
+
+    public void RestartButton()
     {
         SceneManager.LoadScene("game");
     }
-    public void LoadScene()
+    public void MenuButton()
     {
         SceneManager.LoadScene("menu");
 
     }
-    }
+
+}
