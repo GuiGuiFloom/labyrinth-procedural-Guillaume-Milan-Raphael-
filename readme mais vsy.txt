@@ -20,3 +20,7 @@ PART 2
 un algo a été trouver permettant la generation d'un labyrinthe de manière procedurale en utilisant la methode Recursive Backtracker
 
 il créer des murs en fontion de si ceux autours ont déjà été créer, si oui il continue d'en créer la ou il ny en a pas, si non il créer sur ceux ou il n'y en a pas
+
+
+
+ALGO EXIT 
