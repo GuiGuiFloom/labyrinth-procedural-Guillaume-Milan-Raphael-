@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 
 public class flashlight : MonoBehaviour
+    //Les parametres de la lamp torch
 {
     [Header("Settings")]
     [SerializeField] private GameObject torch;
@@ -12,9 +13,13 @@ public class flashlight : MonoBehaviour
     public GameObject player;
     private bool on;
 
+    //UI betterie
+
     [Header("UI")]
     [SerializeField] private Text batterytext;
 
+
+    //allumer la lumiere et la mort de la batterie
     private void Update()
     {
         if (Input.GetKeyDown(SwtichKey))
@@ -37,7 +42,7 @@ public class flashlight : MonoBehaviour
         else if (battery < 0.01f)
 
             // to modify  for full game (disable les controles du joueur
-            Destroy(player.gameObject); 
+            Destroy(player.gameObject);              
 
     }
 }
